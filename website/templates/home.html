@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<div id="header" align="center">
+    <h1>Sprinkles of Joy</h1>
+    <img width="60%" src="./images/banner.jpg" alt="Sprinkles of Joy Logo">
+</div>
+<hr>
+<br>
+<form method="POST">
+    <br />
+    <div align="center">
+        <label for="alergies"></label>
+        <input type="checkbox" id="GF" name="GF" value="GF">
+        <label for="GF" style="padding-right: 5%;">Gluten Free</label>
+        <input type="checkbox" id="SF" name="SF" value="SF">
+        <label for="SF" style="padding-right: 5%;"> Soy Free</label>
+        <input type="checkbox" id="LI" name="LI" value="LI" style="padding-right: 5%;">
+        <label for="LI"> Lactose Intolerant</label><br><br>
+    </div>
+    <hr>
+    <h2 align="center">Menu</h2>
+    <ul class="list-group list-group-flush" id="menu">
+        <div align="center">
+            <p>Menu item 1</p>
+            <p>Menu item 2</p>
+            <p>Menu item 3</p>
+            <p>Menu item 4</p>
+        </div>
+        {% for items in user.menu %}
+        <li class="list-group-item">
+            {{ item.data }}
+            <button type="button" class="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </div>
+</form>
+{% endblock %}
