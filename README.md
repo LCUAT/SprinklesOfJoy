@@ -8,4 +8,5 @@ This project is an inital attempt to build a website for a local Colorado alergy
     - [As Needed] pip install --upgrade watchdog
 
 1. python main.py
-    NOTE:: if you make and db changes, delete the instance.db and then restart the program
+
+NOTE:: if you make and db changes, delete the instance.db and then restart the program

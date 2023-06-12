@@ -22,8 +22,6 @@ def home():
                 MI = MenuItems.query.filter(MenuItems.alergens.contains(SF))
             if LI:
                 MI = MenuItems.query.filter(MenuItems.alergens.contains(LI))
-            if len(MI) == 0:
-                flash('No items found that match altergens.. Please reach out directly for acomodations.', category='warning')
     else:
         MI = MenuItems.query.all()
         GF = None
