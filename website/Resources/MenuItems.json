@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "id":1,
+            "name": "Bread (1 loaf)",
+            "alergens":"GF,LI,SF",
+            "description":"Homemade white bread that can be made any way you need it.",
+            "price":"$7.00 USD"
+        },
+        {
+            "id":2,
+            "name": "Cupcakes (6)",
+            "alergens":"GF,SF",
+            "description":"Delicious cupcakes with a variety of flavors including: raspberry, chocolate, vanilla",
+            "price":"$10.00 USD"
+        },
+        {
+            "id":3,
+            "name": "Cake",
+            "alergens":"SF,GF",
+            "description":"Truly amazing, moist cake in a variety of flavors including: red velvet, chocolate, lemon",
+            "price":"$30.00 USD"
+        },
+        {
+            "id":4,
+            "name": "Muffins (4)",
+            "alergens":"SF,GF",
+            "description":"Truly amazing, moist cake in a variety of flavors including: plain, blueberry, chocolate chip",
+            "price":"$9.00 USD"
+        },
+        {
+            "id":5,
+            "name": "Hamburger Buns (4)",
+            "alergens":"SF,GF,LI",
+            "description":"Need a gluten free bun that doesn't fall aparat?",
+            "price":"$8.00 USD"
+        }
+
+    ]
+}

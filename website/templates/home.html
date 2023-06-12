@@ -10,34 +10,58 @@
     <br />
     <div align="center">
         <label for="alergies"></label>
-        <input type="checkbox" id="GF" name="GF" value="GF">
+        <input type="checkbox" 
+        id="GF" 
+        name="GF" 
+        value="GF"
+        {% if GF %}checked="checked"{% endif %}
+        >
         <label for="GF" style="padding-right: 5%;">Gluten Free</label>
-        <input type="checkbox" id="SF" name="SF" value="SF">
+        
+        <input type="checkbox" 
+        id="SF" 
+        name="SF" 
+        value="SF"
+        {% if SF %}checked="checked"{% endif %}
+        >
         <label for="SF" style="padding-right: 5%;"> Soy Free</label>
-        <input type="checkbox" id="LI" name="LI" value="LI" style="padding-right: 5%;">
+
+
+        <input type="checkbox" 
+        id="LI" 
+        name="LI" 
+        value="LI" 
+        style="padding-right: 5%;"
+        {% if LI %}checked="checked"{% endif %}
+        >
         <label for="LI"> Lactose Intolerant</label><br><br>
+        <div align="center">
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </div>
     </div>
     <hr>
     <h2 align="center">Menu</h2>
     <ul class="list-group list-group-flush" id="menu">
         <div align="center">
-            <p>Menu item 1</p>
-            <p>Menu item 2</p>
-            <p>Menu item 3</p>
-            <p>Menu item 4</p>
-        </div>
-        {% for items in user.menu %}
-        <li class="list-group-item">
-            {{ item.data }}
-            <button type="button" class="close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </li>
-        {% endfor %}
-    </ul>
+            <table 
+            width = "80%"
+            border="1"
+            >
+                <tr>
+                    <th colspan = "4" style="width:fit-content" padding>Name</th>
+                    <th>Descriptions</th>
+                    <th colspan = "4">Price</th>
+                </tr>
 
-    <div align="center">
-        <button type="submit" class="btn btn-primary">Filter</button>
-    </div>
+            {% for item in menuItems %}
+                <tr>
+                    <td colspan = "4">{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.price }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </ul>
 </form>
 {% endblock %}
